@@ -10,13 +10,15 @@
     <body>
         <section id="players">
             <div>
-                <div class="p1">X</div>
+                <div class="p1">❌</div>
                 <div class="score1">0</div>
+                <div class="round1">0</div>
             </div>
             
             <div>
-                <div class="p2">O</div>
+                <div class="p2">⭕️</div>
                 <div class="score2">0</div>
+                <div class="round2">0</div>
             </div>
         </section>
         
@@ -34,15 +36,31 @@
         
         <div class="button">
             <button class="reset">RESET</button>
-            <select class="modes">
+            <select class="mode">
                 <option class="classic">Classic</option>
                 <option class="future">Future</option>
+                <option class="magic">Magic</option>
                 <option class="romantic">Romantic</option>
+                <option class="season">Season</option>
+                <option class="moon">Moon</option>
             </select>
         </div>
         
         <div class="message"></div>
-        
+
+        <section id="localSt">
+            <fieldset>
+                <legend>Best of 5</legend>
+                <input id="inpKey" type="text" placeholder="Your Name">
+                <input id="inpValue" type="text" placeholder="Your Score">
+                <button id="btnInsert" type="button">SUBMIT</button>
+            </fieldsetid="localSt">
+
+            <fieldset>
+                <legend>❌⭕️</legend>
+                <div id="outPut"></div>
+            </fieldset>
+        </section>
         
         <script src="tictactoe.js"></script>
     </body>

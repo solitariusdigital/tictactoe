@@ -1,10 +1,11 @@
 body {
     display: grid;
-    justify-content: center;background-color: rgb(233, 230, 230);
+    justify-content: center;
+    background-color: rgb(209, 208, 208);
 }
 
 #board {
-    display: inline-grid;
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 10px;
 }
@@ -13,10 +14,10 @@ body {
     display: inline-flex;
     justify-content: center;
     height: 100%;
-    padding: 10px;
+    padding: 5px;
 }
 
-.p1, .p2, .score1, .score2 {
+.p1, .p2, .score1, .score2, .round1, .round2 {
     width: 100px;
     border: .5px solid black;
     text-align: center;
@@ -26,12 +27,19 @@ body {
     font-size: 15px;
 }
 
+.round1, .round2 {
+    background-color: lightgreen;
+    color: red;
+}
+
 .p1, .score1 {
     background-color: rgb(183, 210, 236);
+    color: red;
 }
 
 .p2, .score2 {
     background-color: rgb(233, 185, 151);
+    color: red;
 }
 
 .square {
@@ -64,7 +72,12 @@ body {
     box-shadow: 2px 2px 2px 0 gray
 }
 
-.modes {
+.reset:hover {
+    background-color: black;
+    color: white;
+}
+
+.mode {
     border: .5px solid black;
     padding: 5px;
     margin: 15px;
@@ -75,23 +88,135 @@ body {
     box-shadow: 2px 2px 2px 0 gray
 }
 
+.mode:hover {
+    background-color: black;
+    color: white;
+}
+
 .message {
     margin: 10px;
-    color: rgb(48, 192, 103);
+    color: #000000;
     display: inline-flex;
     justify-content: center;
     font-family: monospace;
     font-size: 15px;
+    color: red;
+    height: 15px;
 }
 
-.future {
+.classic .square {
+    background-color: cornsilk;
+}
+
+.future .square {
     background-color: black;
-    content: '\U+1F47D'; /* alien */
-    content: '\U+1F916'; /* robot */
 }
 
-.romantic {
-    background-color: red;
-    content: '\U+1F5A4'; /* black heart */
-    content: '\U+1F90D'; /* white heart */
+.future .square:hover { 
+    background-color: white;
+}
+
+.season .square {
+    background-color: rgb(238, 236, 146);
+}
+
+.season .square:hover { 
+    background-color: rgb(231, 153, 107);
+}
+
+.romantic .square {
+    background-color: rgb(196, 80, 80);
+}
+
+.romantic .square:hover { 
+    background-color: black;
+}
+
+.moon .square {
+    background-color: rgb(197, 191, 191);
+}
+
+.moon .square:hover { 
+    background-color: rgb(95, 152, 209);
+}
+
+.magic .square {
+    background-color: rgb(185, 148, 216);
+}
+
+.magic .square:hover { 
+    background-color: rgb(239, 243, 32);
+}
+
+.icon1::before {
+    content: "\274C"; /* cross */
+}
+
+.icon2::before {
+    content: "\2B55"; /* circle */
+}
+
+.icon3::before {
+    content: "\1F47D"; /* alien */
+}
+
+.icon4::before {
+    content: "\1F916"; /* robot */
+}
+
+.icon5::before {
+    content: "\1F340"; /* green */
+}
+
+.icon6::before {
+    content: "\1F341"; /* yellow */
+}
+
+.icon7::before {
+    content: "\1F5A4"; /* black heart */
+}
+
+.icon8::before {
+    content: "\1F49B"; /* yellow heart */
+}
+
+.icon9::before {
+    content: "\1F319"; /* moon x */
+}
+
+.icon10::before {
+    content: "\1F315"; /* moon o */
+}
+
+.icon11::before {
+    content: "\1F308"; /* rainbow x */
+}
+
+.icon12::before {
+    content: "\1F344"; /* mushroom o */
+}
+
+#btnInsert {
+    border: .5px solid black;
+    font-family: monospace;
+    cursor: pointer;
+    font-size: 10px;
+    box-shadow: 2px 2px 2px 0 gray
+}
+
+#btnInsert:hover {
+    background-color: black;
+    color: white;
+}
+
+#localSt {
+    font-family: monospace;
+    color: white;
+    font-size: 15px;
+    color: red;
+}
+
+#inpKey, #inpValue {
+    font-size: 10px;
+    height: 15px;
 }
