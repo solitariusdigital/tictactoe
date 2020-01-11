@@ -25,6 +25,7 @@ body {
     margin: 5px;
     font-family: monospace;
     font-size: 15px;
+    text-align: center;
 }
 
 .round1, .round2 {
